@@ -16,13 +16,13 @@ cache:
     - $HOME/.composer/cache
 
 env:
-  matrix:
+  jobs:
     - PREFER_LOWEST="--prefer-lowest"
     - PREFER_LOWEST=""
     - TLS_TEST="yes" TLS_CA="tls/ca.pem" TLS_PEER_NAME="server.rmq"
     - TLS_TEST="yes" TLS_CA="tls/ca.pem" TLS_PEER_NAME="server.rmq" TLS_CLIENT_CERT="tls/client.pem" TLS_CLIENT_KEY="tls/client.key"
 
-matrix:
+jobs:
   allow_failures:
     - php: nightly
 
